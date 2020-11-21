@@ -19,6 +19,6 @@ const slides = [
       title: "Great job!",
       text: "You made it, have a nice day and see you next time!",
     },
-  ];
+  ]; 
 
   export default slides;
