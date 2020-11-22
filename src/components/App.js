@@ -23,9 +23,9 @@ seti(i+1)
   return (    
     <>
 
-    {i<props.slides.length-1?<button data-testid="button-next" onClick={changeNextSlides}>Next</button>:null}
-    {i>0?<button data-testid="button-prev" onClick={changePrevSlides}>Prev</button>:null}
-    <button data-testid="button-restart" onClick={restartSlides}>Restart</button>
+    <button disabled={i>=props.slides.length-1?true:false} data-testid="button-next" onClick={changeNextSlides}>Next</button>
+    <button disabled={i<=0?true:false} data-testid="button-prev" onClick={changePrevSlides}>Prev</button>
+    <button disabled={i===0?true:false}data-testid="button-restart" onClick={restartSlides}>Restart</button>
     <h1 data-testid="title">{props.slides[i].title}</h1>
     <p data-testid="text">{props.slides[i].text}</p>
 
